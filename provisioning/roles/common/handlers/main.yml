@@ -1,0 +1,4 @@
+---
+# Handlers for common notifications.
+
+- include: openntpd.yml

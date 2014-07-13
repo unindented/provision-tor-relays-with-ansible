@@ -1,0 +1,5 @@
+---
+# Handlers for openntpd.
+
+- name: restart openntpd
+  service: name=openntpd state=restarted

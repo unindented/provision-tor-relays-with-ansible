@@ -1,0 +1,13 @@
+Unattended-Upgrade::Allowed-Origins {
+{% for origin in unattended_allowed_origins %}
+  "${distro_id}:${distro_codename}-{{ origin }}";
+{% endfor %}
+};
+
+Unattended-Upgrade::Package-Blacklist {
+{% for package in unattended_package_blacklist %}
+  "{{package}}";
+{% endfor %}
+};
+
+Unattended-Upgrade::Automatic-Reboot "true";

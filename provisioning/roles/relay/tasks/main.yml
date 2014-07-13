@@ -1,0 +1,5 @@
+---
+# Tasks that will be run on tor relays.
+
+- include: install.yml
+- include: configure.yml

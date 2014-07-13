@@ -1,0 +1,20 @@
+---
+# Tasks that will install tor.
+
+- name: install torproject apt signing gpg key
+  apt_key: >
+    data="{{ lookup('file', 'torproject.gpg') }}"
+    state=present
+
+- name: add torproject to sources list
+  apt_repository: >
+    repo='deb http://deb.torproject.org/torproject.org {{ lsb_release.stdout }} main'
+    state=present
+    update_cache=yes
+
+- name: install tor, arm and keyring packages
+  apt: name="{{ item }}" state=latest
+  with_items:
+    - tor
+    - tor-arm
+    - deb.torproject.org-keyring

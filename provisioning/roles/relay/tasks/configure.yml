@@ -1,0 +1,13 @@
+---
+# Tasks that will configure tor.
+
+- name: configure tor
+  template: >
+    src=torrc.j2 dest=/etc/tor/torrc
+    owner=root group=root mode=0644
+  notify: restart tor
+
+- name: create tor notice
+  template: >
+    src=notice.j2 dest=/etc/tor/notice.html
+    owner=root group=root mode=0644

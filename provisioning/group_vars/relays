@@ -1,0 +1,17 @@
+---
+# List of origins from which to update (security, updates, proposed, backports).
+unattended_allowed_origins: [security, updates]
+
+# List of packages to not update.
+unattended_package_blacklist: []
+
+# Parameters for configuring the relay.
+tor_or_port: 9001
+tor_dir_port: 9030
+tor_exit_policy: reject *:*
+tor_contact_info: daniel at unindented
+tor_notice_path: /etc/tor/notice.html
+tor_relay_bandwidth_rate: 1 MB
+tor_relay_bandwidth_burst: 2 MB
+tor_accounting_start: month 1 00:00
+tor_accounting_max: 100 GB

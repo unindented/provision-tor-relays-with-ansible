@@ -1,0 +1,15 @@
+ORPort {{ tor_or_port }}
+DirPort {{ tor_dir_port }}
+ExitPolicy {{ tor_exit_policy }}
+
+Nickname {{ inventory_hostname_short }}
+ContactInfo {{ tor_contact_info }}
+DirPortFrontPage {{ tor_notice_path }}
+
+RelayBandwidthRate {{ tor_relay_bandwidth_rate }}
+RelayBandwidthBurst {{ tor_relay_bandwidth_burst }}
+
+AccountingStart {{ tor_accounting_start }}
+AccountingMax {{ tor_accounting_max }}
+
+DisableDebuggerAttachment 0

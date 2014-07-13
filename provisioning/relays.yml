@@ -1,0 +1,9 @@
+---
+
+- hosts: relays
+  sudo: yes
+
+  roles:
+    - common
+    - unattended
+    - relay
