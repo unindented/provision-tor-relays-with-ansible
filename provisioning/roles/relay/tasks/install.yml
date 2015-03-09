@@ -8,7 +8,7 @@
 
 - name: add torproject to sources list
   apt_repository: >
-    repo='deb http://deb.torproject.org/torproject.org {{ lsb_release.stdout }} main'
+    repo='deb http://deb.torproject.org/torproject.org {{ ansible_distribution_release }} main'
     state=present
     update_cache=yes
 

@@ -1,8 +1,4 @@
 ---
 # Tasks that will be run on all nodes.
 
-- name: register lsb release
-  command: lsb_release -cs
-  register: lsb_release
-
 - include: openntpd.yml
